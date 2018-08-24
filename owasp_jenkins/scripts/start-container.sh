@@ -35,3 +35,6 @@ fi
 
 touch /tmp/keeprunning
 tail -f /tmp/keeprunning
+
+service filebeat start
+tail -f /var/log/dpkg.log

@@ -1,20 +1,12 @@
 OWASP Jenkins in Docker
 =======================
 
-Want to automate testing your web applications and REST API service layers using the latest OWASP security toolchains and the NIST National Vulnerability Database (NVD)?
-
 This repository uses Ansible to create a docker container to hold an automatically-configured Jenkins application with the `OWASP Dependency Checker`_, `NIST NVD`_, `Python OWASP ZAP`_, and `Openstack Bandit`_ installed. All Jenkins jobs run inside this docker container and are hosted using self-signed ssl certificates.
-
-Hopefully this will make securing your applications easier by jumpstarting your testing with the `OWASP Top 10 Application Security Risks - 2017`_.
-
-.. _NIST NVD: https://nvd.nist.gov/vuln/data-feeds
-.. _OWASP Dependency Checker: https://github.com/jeremylong/DependencyCheck
-.. _OWASP Top 10 Application Security Risks - 2017: https://www.owasp.org/index.php/Top_10_2017-Top_10
 
 Quickly Analyze any Repository with OWASP
 -----------------------------------------
 
-Here's how to scan a repository for security issues. This will download the latest https://hub.docker.com/r/jayjohnson/owasp-jenkins container. Please note: because there are so many known vulnerabilities to test, the container inflates to a size of about ``4.4 GB`` on disk.
+Here's how to scan a repository for security issues. 
 
 In this example I am testing the Bandit repository https://github.com/openstack/bandit.git and will create the ``owasp-report-<date>.html`` file in the current directory before removing the container.
 

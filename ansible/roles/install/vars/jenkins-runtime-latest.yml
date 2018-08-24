@@ -1,7 +1,7 @@
 tools_base_dir: "/opt/tools"
 install_maven: "1"
 update_maven: "0"
-maven_build: "3.5.2"
+maven_build: "3.5.4"
 maven_download_url: "http://www-us.apache.org/dist/maven/maven-3/{{maven_build}}/binaries/apache-maven-{{maven_build}}-bin.tar.gz"
 m2_home: "{{tools_base_dir}}/apache-maven"
 m2: "{{tools_base_dir}}/apache-maven/bin"

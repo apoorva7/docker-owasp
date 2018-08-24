@@ -8,10 +8,10 @@
     path: "{{nvd_depcheck}}"
   register: nvd_depchecker_installed
 
-- name: "Verifying NVD Dependency Checker Exists"
-  fail:
-    msg: "Failed to find NVD Dependency Checker script={{nvd_depcheck}} - Please try manually building it with the command: 'cd {{nvd_depcheck_dir}} && unset JAVA_TOOL_OPTIONS && mvn {{nvd_depcheck_m2_settings}} {{maven_proxy_params}} -DskipTests clean package'"
-  when: not nvd_depchecker_installed.stat.exists
+#- name: "Verifying NVD Dependency Checker Exists"
+#  fail:
+#    msg: "Failed to find NVD Dependency Checker script={{nvd_depcheck}} - Please try manually building it with the command: 'cd {{nvd_depcheck_dir}} && unset JAVA_TOOL_OPTIONS && mvn {{nvd_depcheck_m2_settings}} {{maven_proxy_params}} -DskipTests clean package'"
+#  when: not nvd_depchecker_installed.stat.exists
 
 - name: "Setting NVD Dependency Checker={{nvd_depcheck}} Permissions"
   connection: local

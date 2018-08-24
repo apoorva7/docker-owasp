@@ -7,10 +7,12 @@ services:
     # derived from:
     # https://hub.docker.com/r/jenkins/jenkins/
     # https://github.com/jenkinsci/docker/blob/master/README.md
-    image: jayjohnson/owasp-jenkins:latest
+    image: projectethan007/docker-owasp:latest
     container_name: "owasp-jenkins"
     hostname: owasp-jenkins
-    entrypoint: "/opt/owasp/owasp_jenkins/scripts/start-container.sh"
+#    command: service filebeat start
+   # entrypoint: "/opt/owasp/owasp_jenkins/scripts/start-container.sh"
+    entrypoint: "entrypoint.sh"
     environment:
       # change these as needed
       - ADMIN_JENKINS_USER=admin
